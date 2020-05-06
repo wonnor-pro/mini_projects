@@ -1,8 +1,5 @@
 import pygame
-import numpy as np
-import time
 import random
-print(pygame.ver)
 
 black_color = (0, 0, 0)
 white_color = (255, 255, 255)
