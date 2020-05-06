@@ -22,5 +22,14 @@ Here is the list of current mini-projects:
       <img src="https://tech.connorx.wang/images/mini_project/queen2.png" alt="queen2" height="300"/>
       <img src="https://tech.connorx.wang/images/mini_project/queen1.png" alt="queen1" height="300"/>
   </div>
+  
+  
+- **Percolation Simulator** (Node)
+  
+  We model a percolation system using an n-by-n grid of sites. Each site is either open or blocked. A full site is an open site that can be connected to an open site in the top row via a chain of neighboring (left, right, up, down) open sites. We say the system percolates if there is a full site in the bottom row. In other words, a system percolates if we fill all open sites connected to the top row and that process fills some open site on the bottom row. 
+  
+  <div>
+      <img src="https://tech.connorx.wang/images/mini_project/percolation.png" alt="percolation" height="300"/>
+  </div>
 
 
