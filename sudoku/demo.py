@@ -15,7 +15,7 @@ class sudoku:
         self.unknowns = 81
 
         # Candidate map, the amount of candidates for each block are marked
-        self.candidate = [[0 for i in range(9)] for j in range(9)]
+        self.candidate = [[0 for _ in range(9)] for _ in range(9)]
 
         # Update the unknowns and candidate map
         self.update()

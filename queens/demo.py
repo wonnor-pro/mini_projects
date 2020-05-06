@@ -13,7 +13,7 @@ class queens:
     def __init__(self, number):
         self.lis = []
         self.queens = number
-        self.heuristic = [[0 for i in range(number)] for j in range(number)]
+        self.heuristic = [[0 for _ in range(number)] for _ in range(number)]
         self.solved = False
 
         # randomise the position of each queens
@@ -24,7 +24,7 @@ class queens:
     def randomise(self):
 
         # Randomly generate the queens position in each column to kick off
-        self.lis = [random.randint(1, self.queens - 1) for i in range(self.queens)]
+        self.lis = [random.randint(1, self.queens - 1) for _ in range(self.queens)]
 
     def draw(self, screen):
 
