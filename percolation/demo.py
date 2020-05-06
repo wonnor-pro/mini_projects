@@ -12,6 +12,8 @@ class percolation_system:
     def __init__(self, size):
         self.size = size
         self.board = [[0 for _ in range(self.size)] for _ in range(self.size)]
+
+        # Store the path in another attribute
         self.path = copy.deepcopy(self.board)
 
     def draw(self, screen):
@@ -29,25 +31,33 @@ class percolation_system:
             pygame.draw.line(screen, black_color,
                              (40 + h * 40, 40), (40 + h * 40, 40 + self.size * 40), 1)
 
+        # Outside boundary
         pygame.draw.rect(screen, black_color, (40, 40, self.size * 40, self.size * 40), 3)
 
         pygame.display.flip()
-
-    def clean_board(self, screen):
-
-        pygame.draw.rect(screen, white_color, (40, 40, self.size * 40, self.size * 40), 0)
-        self.draw(screen)
 
     def show_state(self, screen):
 
         for x in range(self.size):
             for y in range(self.size):
+                # According to the label of each element, determine the color
+                # 0 - not open (black)
+                # 1 - open (white)
+                # 2 - connected to the upper surface (blue)
+                # 3 - connected to the both ends (green)
                 color = [black_color, white_color, blue_color, green_color][self.path[x][y]]
                 pygame.draw.rect(screen, color, (40 + y*40, 40 + x*40, 40, 40), 0)
 
         self.draw(screen)
 
     def node(self, index, back = False):
+        '''
+        This method is to determine which blocks are connected. Each node
+        will pass its status to four adjacent elements.
+        :param index: (x,y)
+        :param back: if it is the back propagation (for green color)
+        :return:
+        '''
         x, y = index
 
         status_open = 1
@@ -86,19 +96,28 @@ class percolation_system:
 
     def solve_path(self):
 
+        '''
+        Classify each block according to the rule.
+        :return:
+        '''
+
+        # Initialise the first row with blue color
         for i in range(self.size):
             if self.path[0][i] == 1:
                 self.path[0][i] = 2
 
+        # Use node for forward propagation
         for x in range(self.size):
             for y in range(self.size):
                 if self.path[x][y] == 2:
                     self.node((x, y))
 
+        # Initialise the last row with green color
         for i in range(self.size):
             if self.path[-1][i] == 2:
                 self.path[-1][i] = 3
 
+        # Use node for back propagation
         for x in range(self.size):
             for y in range(self.size):
                 if self.path[x][y] == 3:
@@ -106,6 +125,11 @@ class percolation_system:
 
     def mark_open(self, cursor_index):
 
+        '''
+        Use cursor to mark open (set that block to white)
+        :param cursor_index: (y, x)
+        :return:
+        '''
         y, x = cursor_index
         board_range = (40, 40 + self.size * 40)
 
@@ -119,11 +143,20 @@ class percolation_system:
 
     def randomise(self):
 
+        '''
+        Randomly generate a state.
+        :return:
+        '''
+
         self.board = [[random.randint(0, 1) for _ in range(self.size)] for _ in range(self.size)]
         self.path = copy.deepcopy(self.board)
 
-    def clean(self):
+    def reset(self):
 
+        '''
+        Turn all the blocks to black (off).
+        :return:
+        '''
         self.board = [[0 for _ in range(self.size)] for _ in range(self.size)]
         self.path = copy.deepcopy(self.board)
 
@@ -180,7 +213,7 @@ def main():
             # When pressing c key, clean all the path
             if event.type == pygame.KEYDOWN and event.key == pygame.K_c:
 
-                board.clean()
+                board.reset()
                 board.show_state(screen)
                 pygame.display.flip()
 
