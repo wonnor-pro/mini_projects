@@ -342,7 +342,7 @@ def main():
               [0,0,0,0,0,0,9,3,0]]
 
     # Initiate the object
-    board = sudoku(difficult3)
+    board = sudoku(medium)
 
     # Initialise the pygame
     pygame.init()
