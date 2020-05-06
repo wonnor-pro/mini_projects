@@ -1,6 +1,6 @@
 # Connor's Playground
 
-This is where Connor mess around with some mini projects. These projects are normally very short and using Pygame to demonstrate.
+This is where Connor mess around with some mini projects. These projects are normally very short and using Pygame for demonstration (click to start).
 
 Here is the list of current mini-projects:
 - **Sudoku cracker** (backtrack algorithm)
