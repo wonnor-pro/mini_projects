@@ -32,4 +32,11 @@ Here is the list of current mini-projects:
       <img src="https://tech.connorx.wang/images/mini_project/percolation.png" alt="percolation" height="300"/>
   </div>
 
-
+- **Patterns** (Node)
+  
+  For each column and row, the numbers indicates the patterns of continuous blocks. The position of blocks have to satisfy both conditions from rows and columns. Click the board to place the block. If one condition is satisfied, the label will turn purple.
+  
+  <div>
+      <img src="https://tech.connorx.wang/images/mini_project/patterns1.png" alt="patterns1" height="300"/>
+      <img src="https://tech.connorx.wang/images/mini_project/patterns2.png" alt="patterns2" height="300"/>
+  </div>
