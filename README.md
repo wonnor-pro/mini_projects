@@ -10,7 +10,7 @@ Here is the list of current mini-projects:
   Let your computer help you on your next sudoku challenge night!
 
   <div>
-      <img src="https://tech.connorx.wang/images/mini_project/sudoku.png" alt="sudoku" width="300"/>
+      <img src="images/sudoku.png" alt="sudoku" width="300"/>
   </div>
 
 
@@ -19,8 +19,8 @@ Here is the list of current mini-projects:
   Originally known as Eight queens Puzzle. The eight queens puzzle is the problem of placing eight chess queens on an 8×8 chessboard so that no two queens threaten each other; thus, a solution requires that no two queens share the same row, column, or diagonal. The eight queens puzzle is an example of the more general n queens problem of placing n non-attacking queens on an n×n chessboard, for which solutions exist for all natural numbers n with the exception of n = 2 and n = 3. (Wikipedia)
   
   <div>
-      <img src="https://tech.connorx.wang/images/mini_project/queen2.png" alt="queen2" height="300"/>
-      <img src="https://tech.connorx.wang/images/mini_project/queen1.png" alt="queen1" height="300"/>
+      <img src="images/queen2.png" alt="queen2" height="300"/>
+      <img src="images/queen1.png" alt="queen1" height="300"/>
   </div>
   
   
@@ -29,7 +29,7 @@ Here is the list of current mini-projects:
   We model a percolation system using an n-by-n grid of sites. Each site is either open or blocked. A full site is an open site that can be connected to an open site in the top row via a chain of neighboring (left, right, up, down) open sites. We say the system percolates if there is a full site in the bottom row. In other words, a system percolates if we fill all open sites connected to the top row and that process fills some open site on the bottom row. 
   
   <div>
-      <img src="https://tech.connorx.wang/images/mini_project/percolation.png" alt="percolation" height="300"/>
+      <img src="images/percolation.png" alt="percolation" height="300"/>
   </div>
 
 - **Patterns** (Node)
@@ -37,6 +37,6 @@ Here is the list of current mini-projects:
   For each column and row, the numbers indicates the patterns of continuous blocks. The position of blocks have to satisfy both conditions from rows and columns. Click the board to place the block. If one condition is satisfied, the label will turn purple.
   
   <div>
-      <img src="https://tech.connorx.wang/images/mini_project/patterns1.png" alt="patterns1" height="300"/>
-      <img src="https://tech.connorx.wang/images/mini_project/patterns2.png" alt="patterns2" height="300"/>
+      <img src="images/patterns1.png" alt="patterns1" height="300"/>
+      <img src="images/patterns2.png" alt="patterns2" height="300"/>
   </div>
