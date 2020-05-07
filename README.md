@@ -32,7 +32,7 @@ Here is the list of current mini-projects:
       <img src="images/percolation.png" alt="percolation" height="300"/>
   </div>
 
-- **Patterns** (Node)
+- **Patterns** (Just a game)
   
   For each column and row, the numbers indicates the patterns of continuous blocks. The position of blocks have to satisfy both conditions from rows and columns. Click the board to place the block. If one condition is satisfied, the label will turn purple.
   
